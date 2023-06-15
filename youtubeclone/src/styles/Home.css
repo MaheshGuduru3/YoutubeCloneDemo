@@ -1,0 +1,17 @@
+.home{
+    display: flex;
+    position: relative;
+    top:60px;
+}
+
+
+@media (width <= 998px){
+
+        .home{
+            display: flex;
+            gap:0rem;
+            position: relative;
+            top:60px;
+        }
+    
+}

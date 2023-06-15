@@ -1,0 +1,49 @@
+#login{
+    width:30%;
+    height: 40vh;
+}
+
+@media (max-width : 860px){
+    #login{
+        width: 40%;
+        height: 40vh;
+    }
+}
+@media (max-width : 640px){
+    #login{
+        width: 50%;
+        height: 40vh;
+    }
+}
+
+@media (max-width : 490px){
+    #login{
+        width: 90%;
+        height: 40vh;
+    }
+}
+
+#register{
+    width:30%;
+    height: 40vh;
+}
+
+@media (max-width : 860px){
+    #register{
+        width: 40%;
+        height: 40vh;
+    }
+}
+@media (max-width : 640px){
+    #register{
+        width: 50%;
+        height: 40vh;
+    }
+}
+
+@media (max-width : 490px){
+    #register{
+        width: 90%;
+        height: 40vh;
+    }
+}

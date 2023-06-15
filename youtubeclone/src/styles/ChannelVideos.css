@@ -1,0 +1,30 @@
+#channel-thumbnail-img {
+    height:25vh;
+ }
+ #channel-thumbnail-title{
+  width:100%;height:6vh;overflow:hidden;
+ }
+#channel-video-part{
+    text-decoration: none;
+    color: black;
+}
+#channel-video-part:hover{
+    
+}
+#channel-card1{
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+}
+
+#channel-videos-all{
+    width: 80%;
+}
+
+@media (width <= 990px) {
+    
+#channel-videos-all{
+    width: 100%;
+    padding: 0;
+}
+}

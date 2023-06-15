@@ -1,0 +1,40 @@
+.singlevideo{
+    width:70%;
+  
+}
+.singlevideo-plays{
+    width:70%;
+    height: 64vh;
+}
+#suggestedvid{
+    width: 40%;
+}
+.videoplays-main{
+    display: flex;
+}
+
+#videolist-thumb{
+    width: 50%;
+    height: 25vh;
+}
+
+#titled{
+    width:80%;
+    height: 13vh;
+    overflow: hidden;
+}
+
+
+@media (width <= 1000px){
+    .videoplays-main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .singlevideo{
+        max-width: 100%;
+    }
+    #suggestedvid{
+        width:100%
+    }
+}

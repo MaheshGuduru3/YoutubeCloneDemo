@@ -1,0 +1,119 @@
+.videolist-main{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    
+}
+
+
+.videolist-main1{
+     width: 100%;
+     height: 5.5vh;
+     display: flex;
+     gap:0.5rem;
+     overflow-x: scroll;
+     background-color: white;
+}
+
+.videolist-main1::-webkit-scrollbar{
+    display: none;
+}
+#changed {
+    background-color: black;
+    color: white;
+}
+
+.videolist-main-video{
+    width: 78%;
+    background-color: beige;
+}
+#card1{
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+}
+::-webkit-scrollbar{
+    width: 0.4vw;
+}
+::-webkit-scrollbar-thumb{
+    width: 0.4vw;
+    border-radius: 0.5rem;
+    background-color: rgb(187, 184, 184)
+}
+::-webkit-scrollbar-track{
+     background-color:white;
+}
+
+#video-part{
+    text-decoration: none;
+    color: black;
+}
+
+#video-part:hover{
+   border:0px;
+   border-radius: 0px;
+   transform: scale(1.1);
+
+}
+.videolist-main2{
+    width:100%;
+}
+
+#thumbnail-img {
+   height:32vh;
+}
+#thumbnail-channel{
+  width:45px;  height:45px;  border-radius:50%;
+}
+#thumbnail-title{
+ width:100%;height:6vh;overflow:hidden;
+}
+#thumbnail-channelName{
+    font-weight: 700;
+}
+
+#thumbnail-img-loading {
+    height:32vh;
+    background-color: rgb(241, 241, 241);animation: load 1s  infinite ease-in-out;
+ }
+
+#thumbnail-channel-loading{
+    width:45px;  height:45px;  border-radius:50%; background-color: rgb(241, 241, 241);animation: load 1s  infinite ease-in-out;
+}
+
+
+@keyframes load {
+    0%{
+        background-color: rgb(187, 184, 184);
+    }
+    100%{
+        background-color: rgb(241, 241, 241);
+    }
+    
+}
+
+
+@media ( width <= 992px){
+     .videolist-main{
+         max-width: 100%;
+     }
+     .videolist-main1{
+        width: 100%;
+        display: flex;
+        gap:0.5rem;
+        background-color: white;
+   }
+}
+
+
+@media (width < 1400px ){
+    .videolist-main1{
+        width: 100%;
+        height: 6vh;
+        display: flex;
+        gap:0.5rem;
+        overflow-x: scroll;
+        background-color: white;
+   }
+}
