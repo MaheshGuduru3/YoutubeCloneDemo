@@ -7,9 +7,11 @@ const dotenv = require('dotenv')
 dotenv.config()
 const port = process.env.PORT
 
-app.use(cors({ origin : true }))
+app.use(cors({ origin : "https://dreamy-palmier-88fdf2.netlify.app" }))
 app.use('/api',Allroutes)
 
+
+app.use(express.json())
 
    
 
