@@ -45,11 +45,11 @@ const Header = () => {
                 </div>
                 
                 <div className="input-group d-none d-sm-flex" id='search-main'>
-                    <input type="search" className="form-control" placeholder="Search" id='search-button' onChange={(e)=>searchingData(e)}/>
+                    <input type="search" className="form-control" placeholder="Search for here.." id='search-button' onChange={(e)=>searchingData(e)}/>
                     <NavLink to={`/search/${state.searchBar}`}  className="input-group-text text-center" id="search-icon"><i className="bi bi-search"></i></NavLink>     
                 </div>
                 <div className="input-group d-flex d-sm-none w-100 me-2" id='search-main'>
-                    <input type="search" className="form-control" placeholder="Search" id='search-button' onChange={(e)=>searchingData(e)}/>
+                    <input type="search" className="form-control" placeholder="Search for here." id='search-button' onChange={(e)=>searchingData(e)}/>
                     <NavLink to={`/search/${state.searchBar}`}  className="input-group-text text-center" id="search-icon"><i className="bi bi-search"></i></NavLink>     
                 </div>
               

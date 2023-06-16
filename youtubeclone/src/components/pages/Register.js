@@ -24,7 +24,7 @@ const Register = () => {
     }
    
     const authState = async ()=>{
-        await fetch('http://localhost:4000/api/register',{
+        await fetch('https://dreamy-palmier-88fdf2.netlify.app/register',{
           method:"POST",
           headers : {
            'Authorization' : regTokenAuth

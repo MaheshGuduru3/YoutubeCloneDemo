@@ -67,7 +67,7 @@
   width:45px;  height:45px;  border-radius:50%;
 }
 #thumbnail-title{
- width:100%;height:6vh;overflow:hidden;
+ width:100%;height:5vh;overflow:hidden;
 }
 #thumbnail-channelName{
     font-weight: 700;

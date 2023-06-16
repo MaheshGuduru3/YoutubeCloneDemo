@@ -37,4 +37,8 @@
     #suggestedvid{
         width:100%
     }
+    #videolist-thumb{
+        width: 30%;
+        height: 25vh;
+    }
 }
