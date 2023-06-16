@@ -25,7 +25,7 @@ const Login = () => {
  }
 
  const authState = async ()=>{
-     await fetch('https://dreamy-palmier-88fdf2.netlify.app/login',{
+     await fetch('https://dreamy-palmier-88fdf2.netlify.app/api/login',{
        method:"POST",
        headers : {
         'Authorization' : tokenAuth

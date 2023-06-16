@@ -6,7 +6,6 @@ export const INITIAL_STATE ={
 }
 
 export const reducers = (state , action)=>{
-    console.log(action)
     switch(action.type){
         case 'Fetch_start':
             return {
