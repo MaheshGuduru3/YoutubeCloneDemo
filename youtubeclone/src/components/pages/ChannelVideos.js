@@ -8,7 +8,8 @@ const ChannelVideos = () => {
     const { state , dispatch } = useContext(AppProvider)
     const [channelHistory , setChannelHistory] = useState([])
     const [channelWatch , setChannelWatch] = useState([]);
-       
+    const BASE_URL = process.env.REACT_APP_RAPID_API_URL       
+   
     const options = {
         params: {
           part: 'snippet,statistics',
@@ -37,7 +38,7 @@ const ChannelVideos = () => {
      const channel = async()=>{
                 dispatch({type:'Fetch_start'})
         try{
-            const response = await axios.get('https://youtube-v31.p.rapidapi.com/channels',options)
+            const response = await axios.get(BASE_URL + '/channel',options)
             setChannelHistory(response.data.items)
             dispatch({type:'Fetch_success'})
         }
@@ -49,7 +50,7 @@ const ChannelVideos = () => {
      const channelVideos = async()=>{
             dispatch({type:'Fetch_start'})
         try{
-            const responsed = await axios.get('https://youtube-v31.p.rapidapi.com/search',options2)
+            const responsed = await axios.get(BASE_URL +'/search',options2)
             setChannelWatch(responsed.data.items)
             dispatch({type:'Fetch_success'})
         }

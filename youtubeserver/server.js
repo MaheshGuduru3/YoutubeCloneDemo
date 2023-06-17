@@ -7,7 +7,9 @@ const dotenv = require('dotenv')
 dotenv.config()
 const port = process.env.PORT
 
-app.use(cors({ origin : true}))
+app.use(cors({ origin : process.env.ORIGIN_URL , 
+               credentials : true,
+            }))
 app.use('/api',Allroutes)
 
 

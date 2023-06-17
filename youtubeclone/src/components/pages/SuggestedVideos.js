@@ -23,8 +23,9 @@ const SuggestedVideos = () => {
   useEffect(()=>{
     const suggest = async ()=>{
       dispatch({type:'Fetch_start'})
+      const BASE_URL = process.env.REACT_APP_RAPID_API_URL
       try{
-        const respo = await axios.get('https://youtube-v31.p.rapidapi.com/search',options)
+        const respo = await axios.get(  BASE_URL + '/search',options)
         setSugList(respo.data.items)
         dispatch({type:'Fetch_success'})
       }

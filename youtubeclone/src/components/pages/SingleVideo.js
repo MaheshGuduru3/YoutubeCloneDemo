@@ -33,8 +33,9 @@ const SingleVideo = () => {
     useEffect(()=>{
       const playing = async()=>{
          dispatch({type:'Fetch_start'})
+         const BASE_URL = process.env.REACT_APP_RAPID_API_URL
         try{
-        const responsed = await axios.get('https://youtube-v31.p.rapidapi.com/videos',options)    
+        const responsed = await axios.get(  BASE_URL +'/videos',options)    
         setPlays(responsed.data.items)
         dispatch({type:'Fetch_success'})
         }

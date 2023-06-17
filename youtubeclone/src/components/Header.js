@@ -15,7 +15,6 @@ const Header = () => {
   }
   
   const searchingData = (e)=>{
-      console.log(e.target.value,"searching..");
     
       dispatch({type:'Fetch_search' , payload : e.target.value})
   }     

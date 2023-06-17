@@ -24,7 +24,7 @@ const Register = () => {
     }
    
     const authState = async ()=>{
-        await fetch('http://localhost:4000/api/register',{
+        await fetch( process.env.SERVER_SIDE +'/api/register',{
           method:"POST",
           headers : {
            'Authorization' : regTokenAuth
