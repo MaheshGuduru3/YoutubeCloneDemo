@@ -8,7 +8,7 @@ const ChannelVideos = () => {
     const { state , dispatch } = useContext(AppProvider)
     const [channelHistory , setChannelHistory] = useState([])
     const [channelWatch , setChannelWatch] = useState([]);
-    const BASE_URL = process.env.REACT_APP_RAPID_API_URL       
+    const BASE_URL = process.env.REACT_APP_RAPID_API_URL
    
     const options = {
         params: {
@@ -37,8 +37,9 @@ const ChannelVideos = () => {
  useEffect(()=>{
      const channel = async()=>{
                 dispatch({type:'Fetch_start'})
+           
         try{
-            const response = await axios.get(BASE_URL + '/channel',options)
+            const response = await axios.get(BASE_URL + '/channels',options)
             setChannelHistory(response.data.items)
             dispatch({type:'Fetch_success'})
         }
