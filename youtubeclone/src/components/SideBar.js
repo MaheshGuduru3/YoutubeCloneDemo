@@ -13,18 +13,16 @@ import '../styles/SideBar.css'
 import { AppProvider } from '../contex/AppContext'
 const SideBar = () => {
     const [sideBar , setSideBar] = useState('Home')
-    const {  state , dispatch } = useContext(AppProvider)
+    const {  state , dispatch , modSearch , setModSearch } = useContext(AppProvider)
 
     const FetchingSideBarVideos = (e)=>{
-           dispatch({type:'Fetch_start' , payload:e.target.innerText })
+           setModSearch(e.target.innerText)
            setSideBar(e.target.innerText)
        
     }
+  useEffect(()=>{
 
-
-
-    useEffect(()=>{
-    },[state.search])
+    },[modSearch])
   return (
     <div className='p-0 sidebar-main'>
         <div className='container d-none d-lg-flex flex-column gap-2' id='sidebar-main1' onClick={FetchingSideBarVideos}>

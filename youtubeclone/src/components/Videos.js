@@ -7,11 +7,10 @@ const arr = ["All","ComputerProgramming","Tamilsongs","Telugusongs","Comedy","Mi
 const Videos = () => {
   const [list, setList] = useState('All')
   const [bufferedVideos , setBufferedVideos] = useState([])
-  const { state , dispatch  } = useContext(AppProvider)
- 
+  const { state , dispatch  , modSearch , setModSearch } = useContext(AppProvider)
   const options = {
     params: {
-      q: state.search,
+      q: modSearch,
       part: 'snippet,id',
       regionCode: 'US',
       maxResults: '50',
@@ -22,8 +21,8 @@ const Videos = () => {
     }
   };
   
-  const suggestedVideos = async ()=>{  
-         dispatch({type:'Fetch_start'})
+  const suggestedVideos = async (e)=>{  
+         dispatch({type:'Fetch_start' })
          const BASE_URL = process.env.REACT_APP_RAPID_API_URL
       try {
           const response = await axios.get(  BASE_URL +'/search',options)       
@@ -37,13 +36,16 @@ const Videos = () => {
 
 
      const fetchingVideoHandler = (e)=>{
-         dispatch({type:'Fetch_start' , payload:e.target.innerText})
+         setModSearch(e.target.innerText)
          setList(e.target.innerText)   
      }
 
 useEffect(()=>{
-    suggestedVideos(); 
-},[state.search])
+   
+  suggestedVideos(); 
+ 
+
+}, [ modSearch ])
   return (
              <div className='container-fluid videolist-main'>
                   <div className='m-0 videolist-main1'> 

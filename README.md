@@ -13,7 +13,5 @@
 
 => some of the screenshots are below 
 
-![Alt text](image-1.png)
-
 ![githubScreenSidenavClick](https://github.com/MaheshGuduru3/YoutubeCloneDemo/assets/136345745/7e93b928-5e13-489d-b3fe-e1b9ad7df708)
 

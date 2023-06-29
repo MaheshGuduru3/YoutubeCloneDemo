@@ -1,7 +1,6 @@
 export const INITIAL_STATE ={
     loading:false,
     error:false,
-    search:'',
     searchBar:'',
 }
 
@@ -11,7 +10,6 @@ export const reducers = (state , action)=>{
             return {
                 loading : true,
                 error : false,
-                search : action.payload,
             };
 
         case 'Fetch_success':
